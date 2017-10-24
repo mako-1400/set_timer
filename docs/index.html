@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>スライダー利用可能なタイマー</title>
+
+<link rel="stylesheet" type="text/css" href="css/slider-pro.min.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="css/examples.css" media="screen"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<script src="js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="js/script_timer.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.sliderPro.min.js"></script>
+
+<script type="text/javascript">
+	$( document ).ready(function( $ ) {
+		$( '#example1' ).sliderPro({
+			width: 1040,
+			height: 430,
+			arrows: true,
+			buttons: false,
+			visibleSize: '100%',
+			forceSize: 'fullWidth',
+			loop: true,//ループ
+			waitForLayers: true,
+			thumbnailWidth: 188,
+			thumbnailHeight: 80,
+			thumbnailPointer: false,
+			autoplay: false,
+			autoScaleLayers: false,
+			breakpoints: {
+				500: {
+					thumbnailWidth: 188,
+					thumbnailHeight: 80
+				}
+			}
+		});
+	});
+</script>
+
+</head>
+
+<body>
+<style type="text/css">
+#example1 .sp-thumbnails-container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%!important;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+</style>
+
+
+
+	<div id="example1" class="slider-pro">
+		<div class="sp-slides">
+		  <!--サンプル１-->
+		  <div class="sp-slide">
+		    <a href="#"><img class="sp-image" src="img/sample01.jpg" /></a>
+		  </div>
+		  <!--サンプル２-->
+		  <div class="sp-slide">
+		    <a href="#"><img class="sp-image" src="img/sample02.jpg" /></a>
+		  </div>
+		  <!--サンプル３-->
+		  <div class="sp-slide">
+		    <a href="#"><img class="sp-image" src="img/sample03.jpg" /></a>
+		  </div>
+		  <!--サンプル４-->
+		  <div class="sp-slide up_timer01">
+		    <a href="#"><img class="sp-image" src="img/sample04.jpg" /></a>
+		  </div>
+		</div>
+		<!--/sp-slides-->
+		<div class="sp-thumbnails">
+		  <!--メンズ就活応援-->
+		  <img class="sp-thumbnail" src="img/sample01.jpg" width="188" height="80"/>
+		  <!--メンズ就活応援-->
+		  <img class="sp-thumbnail" src="img/sample02.jpg" width="188" height="80"/>
+		  <!--メンズ就活応援-->
+		  <img class="sp-thumbnail" src="img/sample03.jpg" width="188" height="80"/>
+		  <!--メンズ就活応援-->
+		  <img class="sp-thumbnail up_timer01" src="img/sample04.jpg" width="188" height="80"/>
+		</div>
+		<!--/sp-thumbnails-->
+	</div>
+
+<p>この下のテキストと上のスライド１枚は指定期間だけ表示します【10/25 14：15～10/25 14：30】</p>
+<div class="up_timer01" data-start-date="2017/10/25 15:20:00" data-end-date="2017/10/25 15:40:00">このdivの中身は２０１７年１０月２５日の１５：２０～１５：４０だけ有効</div>
+
+
+
+</body>
+</html>
